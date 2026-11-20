@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Printable planners, children's activity pages, ebooks and practical digital tools from PaciSparksDream Digital Store.">
+  <meta name="theme-color" content="#fff6f2">
+  <title>PaciSparksDream Digital Store | Little ideas, big possibilities</title>
+  <style>
+    :root{
+      --cream:#fffaf3; --pink:#f8dce5; --pink-deep:#bd6687; --rose:#8e4c68;
+      --gold:#c69a49; --ink:#493b42; --muted:#796b71; --white:#fff;
+      --line:#f0e4df; --shadow:0 16px 40px rgba(117,76,91,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .topline{height:5px;background:linear-gradient(90deg,#e9b9ca,#d4b36f,#f3d9df)}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,250,243,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--rose);letter-spacing:.2px}
+    .brandmark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#f5d5e0,#f4e6c9);display:grid;place-items:center;font-size:22px}
+    .navlinks{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)}
+    .navlinks a:hover{color:var(--rose)}
+    .nav-cta,.button{display:inline-block;border:0;border-radius:999px;padding:12px 20px;background:var(--rose);color:white;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 7px 18px rgba(142,76,104,.17)}
+    .nav-cta:hover,.button:hover{background:#733c55;transform:translateY(-1px)}
+    .hero{max-width:1120px;margin:auto;padding:76px 22px 70px;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff0f4;color:var(--rose);border:1px solid #f3dce4;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+    h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,68px);line-height:1.06;letter-spacing:-1.8px;margin:20px 0;color:#563b49}
+    h1 span{color:var(--pink-deep);font-style:italic}
+    .hero p{font-size:17px;color:var(--muted);max-width:560px;margin:0 0 26px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+    .button.secondary{background:transparent;color:var(--rose);border:1px solid #d9b2c1;box-shadow:none}
+    .hero-note{font-size:12px;color:#927f86;margin-top:16px}
+    .hero-art{min-height:390px;position:relative;display:grid;place-items:center}
+    .sun{width:290px;height:290px;border-radius:50%;background:linear-gradient(145deg,#f9e6dc,#f3d4df);position:absolute;right:10%;top:7%;filter:drop-shadow(0 20px 35px rgba(155,105,119,.12))}
+    .book{position:absolute;width:205px;height:265px;border-radius:12px 20px 20px 12px;background:linear-gradient(145deg,#fff,#f8e8ed);box-shadow:var(--shadow);border:1px solid #edd9dd;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;transform:rotate(-8deg);left:17%;top:16%}
+    .book:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:3px;background:#e7c2cf}
+    .book small{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:bold}
+    .book strong{font-family:Georgia,serif;font-size:27px;line-height:1.08;color:var(--rose);margin:15px 0}
+    .book span{font-size:11px;color:var(--muted)}
+    .spark{position:absolute;font-size:34px;color:var(--gold)}
+    .spark.one{right:10%;top:17%}.spark.two{left:7%;bottom:16%;font-size:25px}.spark.three{right:13%;bottom:18%;font-size:22px}
+    .float-card{position:absolute;right:1%;bottom:14%;background:white;border:1px solid var(--line);padding:13px 17px;border-radius:16px;box-shadow:var(--shadow);font-size:13px;color:var(--rose);font-weight:700}
+    section{padding:68px 22px}
+    .section-inner{max-width:1120px;margin:auto}
+    .section-heading{text-align:center;max-width:650px;margin:0 auto 35px}
+    .section-heading .eyebrow{margin-bottom:12px}
+    h2{font-family:Georgia,serif;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 12px;color:#563b49}
+    .section-heading p{margin:0;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .category{background:white;border:1px solid var(--line);border-radius:20px;padding:23px 18px;text-align:center;box-shadow:0 7px 22px rgba(117,76,91,.04)}
+    .category .icon{width:54px;height:54px;margin:0 auto 12px;border-radius:18px;background:#fff0f4;display:grid;place-items:center;font-size:26px}
+    .category h3{margin:0 0 5px;font-size:16px;color:var(--rose)}
+    .category p{font-size:13px;color:var(--muted);margin:0}
+    .shop-section{background:#fff4f5}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(117,76,91,.05)}
+    .product-art{height:170px;display:grid;place-items:center;font-size:56px;background:linear-gradient(135deg,#f8dfe7,#fff0df)}
+    .product:nth-child(2) .product-art{background:linear-gradient(135deg,#f5e6c9,#fff5e8)}
+    .product:nth-child(3) .product-art{background:linear-gradient(135deg,#e9e2f4,#fcebf0)}
+    .product-info{padding:20px}
+    .tag{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);font-weight:800}
+    .product h3{margin:7px 0;color:var(--rose);font-family:Georgia,serif;font-size:21px}
+    .product p{font-size:13px;color:var(--muted);margin:0 0 15px}
+    .text-link{font-size:13px;color:var(--rose);font-weight:800}
+    .freebie{background:linear-gradient(120deg,#f3dce5,#fff1dc);border-radius:28px;padding:38px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}
+    .freebie p{color:#6f5963;margin:0;max-width:650px}
+    .freebie .button{background:#795064;white-space:nowrap}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center}
+    .about-card{background:linear-gradient(145deg,#f5dce5,#f6e9d1);border-radius:26px;min-height:260px;display:grid;place-items:center;font-size:86px}
+    .about-copy p{color:var(--muted)}
+    .values{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .values span{background:#fff0f4;color:var(--rose);border-radius:999px;padding:8px 13px;font-size:12px;font-weight:700}
+    .contact{background:#fff4f5}
+    .contact-box{max-width:720px;margin:auto;text-align:center;background:white;border:1px solid var(--line);border-radius:24px;padding:38px 25px;box-shadow:var(--shadow)}
+    .contact-box p{color:var(--muted)}
+    footer{padding:27px 22px;text-align:center;color:#8c7a82;font-size:12px}
+    .footer-brand{color:var(--rose);font-weight:800;font-size:14px;margin-bottom:5px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:54px}.hero-art{min-height:330px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:not(.nav-cta){display:none}}
+    @media(max-width:540px){.nav{padding:11px 15px}.brand{font-size:13px}.nav-cta{padding:10px 14px;font-size:12px}.hero{padding-left:18px;padding-right:18px}.hero-art{min-height:290px}.sun{width:235px;height:235px}.book{width:165px;height:220px;left:17%;top:13%}.book strong{font-size:22px}.float-card{right:0;bottom:8%}section{padding:55px 18px}.categories,.products{grid-template-columns:1fr}.freebie{grid-template-columns:1fr;padding:28px}.freebie .button{justify-self:start}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home"><span class="brandmark">🌸</span><span>PaciSparksDream<br><small style="font-weight:500;color:#927783">DIGITAL STORE</small></span></a>
+      <div class="navlinks">
+        <a href="#shop">Shop</a><a href="#freebies">Freebies</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#shop">Explore the shop</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">✨ Digital goodies made with care</div>
+        <h1>Little ideas.<br><span>Big possibilities.</span></h1>
+        <p>Welcome to PaciSparksDream Digital Store — your happy place for useful printables, creative kids' activities, ebooks and simple tools to help you bring your ideas to life.</p>
+        <div class="hero-actions">
+          <a class="button" href="#shop">Explore our products</a>
+          <a class="button secondary" href="#freebies">Discover free resources</a>
+        </div>
+        <div class="hero-note">Instant digital downloads • Create, learn & grow at your own pace</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a pastel printable book">
+        <div class="sun"></div><div class="spark one">✦</div><div class="spark two">✧</div><div class="spark three">✦</div>
+        <div class="book"><small>CREATE • LEARN • GROW</small><strong>Your next<br>bright idea<br>starts here</strong><span>Made for dreamers like you</span></div>
+        <div class="float-card">♡ A little something for every dream</div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="section-inner">
+        <div class="section-heading"><div class="eyebrow">Find your inspiration</div><h2>Something lovely for everyone</h2><p>Explore digital resources designed to make everyday tasks easier and creativity more fun.</p></div>
+        <div class="categories">
+          <div class="category"><div class="icon">🧸</div><h3>Kids' Printables</h3><p>Colouring, tracing and playful learning pages.</p></div>
+          <div class="category"><div class="icon">📒</div><h3>Planners</h3><p>Simple pages to organise your days and goals.</p></div>
+          <div class="category"><div class="icon">💡</div><h3>Business Tools</h3><p>Helpful resources for creators and small businesses.</p></div>
+          <div class="category"><div class="icon">📚</div><h3>Ebooks & Guides</h3><p>Practical ideas to help you learn something new.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-inner">
+        <div class="section-heading"><div class="eyebrow">The digital boutique</div><h2>Explore the shop</h2><p>Thoughtful digital resources for little learners, busy days and big dreams.</p></div>
+        <div class="products">
+          <article class="product"><div class="product-art">🖍️</div><div class="product-info"><div class="tag">For little learners</div><h3>Kids' Activity Printables</h3><p>Fun colouring and tracing activities to keep curious minds learning and creating.</p><a class="text-link" href="#contact">Ask about kids' printables →</a></div></article>
+          <article class="product"><div class="product-art">🌷</div><div class="product-info"><div class="tag">Plan with purpose</div><h3>Planners & Organisers</h3><p>Printable pages to bring a little more calm, clarity and organisation to your routine.</p><a class="text-link" href="#contact">Ask about planners →</a></div></article>
+          <article class="product"><div class="product-art">🚀</div><div class="product-info"><div class="tag">For growing businesses</div><h3>Business Bundles & Guides</h3><p>Digital tools, templates and beginner-friendly guides for your next step.</p><a class="text-link" href="#contact">Ask about business tools →</a></div></article>
+        </div>
+        <p style="text-align:center;color:#907b84;font-size:12px;margin:22px 0 0">New products are being added. Product checkout links will appear here as the shop catalogue grows.</p>
+      </div>
+    </section>
+
+    <section id="freebies">
+      <div class="section-inner">
+        <div class="freebie">
+          <div><div class="eyebrow">A little gift from us</div><h2 style="margin:12px 0">Love a freebie?</h2><p>We’re preparing a collection of free printable resources to help you get inspired. Check back soon for your first little download!</p></div>
+          <a class="button" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-inner about-grid">
+        <div class="about-card">🌸✨</div>
+        <div class="about-copy"><div class="eyebrow">A little about us</div><h2>Welcome to our dream in digital form.</h2><p>PaciSparksDream Digital Store was created to share useful, creative and easy-to-use digital resources. From fun activities for children to practical tools for people building their own dreams, our goal is to make digital products feel simple, joyful and accessible.</p><p>Thank you for being part of this journey. Every visit and every bit of support means so much.</p><div class="values"><span>Creativity</span><span>Learning</span><span>Growth</span><span>Made with care</span></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="contact-box"><div class="eyebrow">Let's connect</div><h2>Have a question?</h2><p>Interested in a product, need help or want to say hello? Send us a message. We'd love to hear from you.</p><a class="button" href="mailto:pacienciasamuelmarirangwe@gmail.com?subject=PaciSparksDream%20Digital%20Store%20Enquiry">Email the store</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-brand">🌸 PaciSparksDream Digital Store</div><div>Little ideas. Big possibilities. © <span id="year"></span> All rights reserved.</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
